@@ -12,9 +12,15 @@ phoneRegex = re.compile(
     re.VERBOSE,
 )
 
-# TODO: Create email regex
-
-# TODO: Create email regex
+emailRegex = re.compile(
+    r"""(
+        [a-zA-Z0-9._%+-]+   # User name
+        @
+        [a-zA-Z0-9.-]+      # Domain name
+        (\.[a-zA-Z]{2,4})   # Top-level domain
+    )""",
+    re.VERBOSE,
+)
 
 # TODO: Find matches on clipboard
 
