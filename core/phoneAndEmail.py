@@ -38,4 +38,10 @@ for phoneNumbers in phoneRegex.findall(text):
 for emailAddresses in emailRegex.findall(text):
     matches.append(emailAddresses[0])
 
-# TODO: Copy matches to clipboard
+# Copy results to clipboard
+if len(matches) > 0:
+    pyperclip.copy("\n".join(matches))
+    print("Copied to clipboard:")
+    print("\n".join(matches))
+else:
+    print("No phone numbers or email adresses found.")
